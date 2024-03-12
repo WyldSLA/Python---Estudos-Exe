@@ -66,5 +66,5 @@ while True:
 
 print("-="*20)
 print("Placar Final!!")
-print("Você ganhou {} veze(s).".format(contJog))
-print("O computador ganhou {} veze(s).".format(contPC))
+print(f"Você ganhou {contJog} veze(s).")
+print(f"O computador ganhou {contPC} veze(s).")
