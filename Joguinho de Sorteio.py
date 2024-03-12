@@ -12,6 +12,9 @@ print("Tente adivinhar o número que está entre 0 e 100! :D")
 cont = 0
 while True:
     jogada = int(input("Digite um número entre 0 e 100: "))
+    while jogada < 0 and jogada > 100:
+        print("Erro! Digite apenas entre 0 e 100!")
+        jogada = int(input("Digite um número entre 0 e 100: "))
     cont += 1
     while jogada < 0 or jogada > 100:
         print("Erro! digite um número entre 0 e 100! >:(")
@@ -23,7 +26,7 @@ while True:
     else:
         if(jogada > numero_sorteado):
             time.sleep(0.5)
-            print("Tenta chutar mais baixo...")
+            print("Tente chutar mais baixo...")
         elif(jogada < numero_sorteado):
             time.sleep(0.5)
-            print("Tenta um chute mais alto...")
+            print("Tente chutar mais alto...")

@@ -22,7 +22,7 @@ while True:
     print("PO!!!")
 
     print("-="* 20)
-    print(f"O usuário jogou {jogadas[usuario_jogada]}.")
+    print(f"Você jogou {jogadas[usuario_jogada]}.")
     print(f"O computador jogou {jogadas[pc]}.")
     print("-="*20)
 
@@ -30,31 +30,41 @@ while True:
         if pc == 1:
             print("O computador ganhou!")
             contPC += 1
+            print("-="*20)
         elif pc == 2:
-            print("O usuário ganhou!")
+            print("Você ganhou!")
             contJog+= 1
+            print("-="*20)
     elif usuario_jogada == 1:
         if pc == 0:
-            print("O usuário ganhou!")
+            print("Você ganhou!")
             contJog+= 1
+            print("-="*20)
         elif pc == 2:
             print("O computador ganhou!")
             contPC+=1
+            print("-="*20)
     elif usuario_jogada == 2:
         if pc == 0:
             print("O computador ganhou!")
             contPC+=1
+            print("-="*20)
         elif pc == 1:
-            print("O usuário ganhou!")
+            print("Você ganhou!")
             contJog+=1
+            print("-="*20)
     if usuario_jogada == pc:
         print("Empate!")
+        print("-="*20)
 
-    resp = str(input("Mais uma vez?[S]/[N]")).upper().strip()
+    resp = str(input("Mais uma vez?[S]/[N]")).upper().strip()[0]
+    while resp != "S" and resp != "N":
+        print("Erro! Digite somente Sim ou Não.")
+        resp = str(input("Mais uma vez?[S]/[N]")).upper().strip()[0]
     if resp == "N":
         break
 
 print("-="*20)
 print("Placar Final!!")
-print("O usuário ganhou {} veze(s).".format(contJog))
+print("Você ganhou {} veze(s).".format(contJog))
 print("O computador ganhou {} veze(s).".format(contPC))
