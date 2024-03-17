@@ -14,7 +14,7 @@ while True:
     usuario_jogada = int(input("Digite seu jogada: "))
     while usuario_jogada < 0 or usuario_jogada > 2:
         print("Erro! Digite entre 0 e 2!")
-        usuario_jogada = int(input("Digite seu jogada: "))
+        usuario_jogada = int(input("Digite sua jogada: "))
     print("JO")
     time.sleep(0.8)
     print("KEN")
