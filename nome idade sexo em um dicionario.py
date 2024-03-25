@@ -26,7 +26,7 @@ for p in pessoas:
 print()
 print("- Lista de pessoas com idade acima da média:")
 for p in pessoas:
-    if p["Idade"] > media:
+    if p["Idade"] >= media:
         print(f"Nome: {p["Nome"]}; Sexo: {p["Sexo"]}; Idade: {p["Idade"]}.")
 
 
